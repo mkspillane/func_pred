@@ -82,7 +82,7 @@ def grad_desc(Z,X,Y,A_s,B_s,n_epoch,epoch_per,learn_rate):
     return J_hist,A_t,B_t
 
     
-def adam_grad(Z,X,Y,A_s,B_s,n_epoch,epoch_per,learning_rate,beta1=.9,beta2=.999,epsilon=10.**-8):
+def adam_grad(Z,X,Y,A_s,B_s,n_epoch,epoch_per,learning_rate,beta1=.99,beta2=.999,epsilon=10.**-8):
     #adam gradient decent
     A_t=A_s
     B_t=B_s
@@ -156,7 +156,7 @@ A=np.random.randn(points_in+1,points_in)*0.1
 B=2*np.random.rand(points_in+1,1)-1
 
 
-J,Af,Bf = adam_grad(Z1,X1,Y1,A,B,600,.1,.002)
+J,Af,Bf = adam_grad(Z1,X1,Y1,A,B,1600,.1,.002)
 
 
 
