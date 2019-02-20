@@ -20,11 +20,13 @@ of PDEs
 
 -NN t and l.py
 This is a NN with cells made up of a tanh activation with a linear skip:
+
   A_{i+1} = tanh(W_{i+1,t} A_{i}+b_{i+1,t})+W_{i+1,l}A_i+b_{i+1,l}
+  
 The final output is is then matched with the Y's as done above to produce a delta_Y output.  Two cost functions are provided one of which is commented out (L2).  Adding L1 would be fairly easy and adding multiple together would be easy because derivatives add.
   
-This can have any number of layers depending on the input given.  There is a function which allows for the initialization fo the NN which allows the number of layers and their dimensions to be chosen.  
+This can have any number of layers depending on the input given.  There is a function which allows for the initialization of the NN with the number of layers and their dimensions to be chosen.  
 
-The linear skip is added because a NN with tanh activations was having trouble for large extrapolations.  It is possible that this was due to problems replicating the identity function using tanh.  Whatever the reason this version with the skip works better.  
+The linear skip was added because a NN with tanh activations was having trouble for large extrapolations in testing on exp(-x^2).  It is possible that this was due to problems replicating the identity function using tanh (recall that exp(-x^2) is a solution to y' +2x y = 0.  Whatever the reason this version with the skip works better.  
 
 Finally, this file contains a couple optimizers that work on the NN. (There may be an error in the Nosterov momentum) as it can give somewhat eratic responses.
