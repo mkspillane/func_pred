@@ -7,16 +7,7 @@ import copy
 # GRADED FUNCTION: initialize_parameters_deep
 
 def initialize_parameters_deep_tl(layer_dims,rint=3):
-    """
-    Arguments:
-    layer_dims -- python array (list) containing the dimensions of each layer in our network
-    
-    Returns:
-    parameters -- python dictionary containing your parameters "W1", "b1", ..., "WL", "bL":
-                    Wl -- weight matrix of shape (layer_dims[l], layer_dims[l-1])
-                    bl -- bias vector of shape (layer_dims[l], 1)
-    """
-    
+
     np.random.seed(rint)
     parameters = {}
     L = len(layer_dims)            # number of layers in the network
