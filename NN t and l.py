@@ -1,10 +1,10 @@
-# -*- coding: utf-8 -*-
+
 import numpy as np
 import h5py
 import matplotlib.pyplot as plt
 import copy
 
-# GRADED FUNCTION: initialize_parameters_deep
+
 
 def initialize_parameters_deep_tl(layer_dims,rint=3):
 
